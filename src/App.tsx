@@ -1,17 +1,26 @@
 import React from "react";
-import { ServicesSection } from "./components/ServicesSection";
+import { Routes, Route } from "react-router-dom";
+import { Layout } from "./components/Layout";
+import { Home } from "./pages/Home";
+import { ServicesPage } from "./pages/Services";
 
 const App: React.FC = () => {
   return (
-    <div className="min-h-screen bg-slate-950 text-white">
-      {/* Your hero / nav here */}
-      <main>
-        {/* ...hero... */}
-        <ServicesSection />
-        {/* ...other sections... */}
-      </main>
-      {/* footer */}
-    </div>
+    <Layout>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/services" element={<ServicesPage />} />
+        {/* Optional: catch-all */}
+        <Route
+          path="*"
+          element={
+            <div className="py-24 text-center text-sm text-slate-300">
+              <p>Page not found.</p>
+            </div>
+          }
+        />
+      </Routes>
+    </Layout>
   );
 };
 
