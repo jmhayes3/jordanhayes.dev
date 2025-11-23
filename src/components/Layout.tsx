@@ -32,12 +32,12 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
             >
               Services
             </NavLink>
-            <a
-              href="mailto:admin@jordanhayes.dev"
+            <Link
+              to="/contact"
               className="rounded-lg bg-emerald-500 px-3 py-1.5 text-xs font-semibold text-slate-950 shadow hover:bg-emerald-400"
             >
               Contact
-            </a>
+            </Link>
           </nav>
         </div>
       </header>
