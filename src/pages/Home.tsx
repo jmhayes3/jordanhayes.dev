@@ -18,7 +18,7 @@ export const Home: React.FC = () => {
           </h1>
           <p className="mt-4 max-w-xl text-sm text-slate-300">
             I’m Jordan, a developer focused on Cloudflare-based apps for small
-            businesses, hospitality, and niche SaaS. Think: websites, booking
+            businesses, hospitality, and custom SaaS. Think: websites, booking
             engines, and internal tools that are fast, cheap to run, and easy to maintain.
           </p>
 
@@ -29,12 +29,12 @@ export const Home: React.FC = () => {
             >
               View productized services
             </Link>
-            <a
-              href="mailto:hello@jordanhayes.dev"
-              className="text-sm font-medium text-slate-200 underline-offset-4 hover:underline"
+            <Link
+              to="/contact"
+              className="rounded-lg bg-emerald-500 px-3 py-1.5 text-xs font-semibold text-slate-950 shadow hover:bg-emerald-400"
             >
-              Tell me about your project →
-            </a>
+              Contact
+            </Link>
           </div>
         </div>
       </section>
