@@ -132,7 +132,7 @@ export const ContactPage: React.FC = () => {
                 value={business}
                 onChange={(e) => setBusiness(e.target.value)}
                 className="w-full rounded-xl border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-white outline-none focus:border-emerald-400 focus:ring-1 focus:ring-emerald-400"
-                placeholder="South Shore Harbour Resort"
+                placeholder="Jordan's Bed & Breakfast"
               />
             </div>
 
