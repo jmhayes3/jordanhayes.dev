@@ -31,7 +31,7 @@ export const Home: React.FC = () => {
             </Link>
             <Link
               to="/contact"
-              className="rounded-lg bg-emerald-500 px-3 py-1.5 text-xs font-semibold text-slate-950 shadow hover:bg-emerald-400"
+              className="rounded-xl bg-emerald-500 px-5 py-2.5 text-sm font-semibold text-slate-950 shadow hover:bg-emerald-400"
             >
               Contact
             </Link>
