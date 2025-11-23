@@ -17,10 +17,9 @@ export const Home: React.FC = () => {
             </span>
           </h1>
           <p className="mt-4 max-w-xl text-sm text-slate-300">
-            I’m Jordan, a developer focused on Cloudflare-based apps for local
+            I’m Jordan, a developer focused on Cloudflare-based apps for small
             businesses, hospitality, and niche SaaS. Think: websites, booking
-            engines, lead funnels, and internal tools that are fast, cheap to
-            run, and easy to maintain.
+            engines, and internal tools that are fast, cheap to run, and easy to maintain.
           </p>
 
           <div className="mt-6 flex flex-wrap gap-3">
@@ -48,8 +47,8 @@ export const Home: React.FC = () => {
               What I focus on
             </h2>
             <p className="mt-2 text-sm text-slate-300">
-              Local businesses, boutique hotels, and small teams who need
-              reliable software without a full-time engineering department.
+              Small businesses and teams who need reliable
+              software without a full-time engineering department.
             </p>
           </div>
           <div className="space-y-2 text-sm text-slate-300">
