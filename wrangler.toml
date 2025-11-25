@@ -8,7 +8,7 @@ pages_build_output_dir = "./dist"
 # Add any environment variables you need here
 
 [[d1_databases]]
-binding = "DB"              # This is the name you'll use in your Worker (env.DB)
+binding = "CONTACTS_DB"              # This is the name you'll use in your Worker (env.DB)
 database_name = "contacts-db"
 database_id = "ddbe3b15-4dbb-4b8a-ba6a-c3c610c3b9f1"
 
