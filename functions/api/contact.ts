@@ -3,6 +3,13 @@
 //   npm install -D @cloudflare/workers-types
 // and add `/// <reference types="@cloudflare/workers-types" />` at the top.
 
+export interface Env {
+  CONTACTS_DB: D1Database;
+  RESEND_API_KEY?: string;
+  EMAIL_FROM?: string;
+  EMAIL_TO?: string;
+}
+
 export const onRequestPost: PagesFunction = async (context) => {
   const { request, env } = context;
 
@@ -44,6 +51,24 @@ export const onRequestPost: PagesFunction = async (context) => {
       source,
       messageSnippet: message.slice(0, 120),
     });
+
+    // 1) Write to D1
+    try {
+      await env.CONTACTS_DB.prepare(
+        `INSERT INTO contact_submissions
+        (name, email, business, service, message, source)
+        VALUES (?, ?, ?, ?, ?, ?)`
+      )
+        .bind(name, email, business, service, message, source)
+        .run();
+    } catch (dbErr) {
+      console.error("D1 insert error:", dbErr);
+      // We still continue to try sending an email, but report failure to client
+      return jsonResponse(
+        { ok: false, error: "Error saving your message. Please try again." },
+        500
+      );
+    }
 
     // TODO: Wire this into whatever you want:
     // Option A: send email via an email provider API
