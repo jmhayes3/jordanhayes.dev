@@ -29,12 +29,6 @@ export const Home: React.FC = () => {
             >
               View productized services
             </Link>
-            <Link
-              to="/contact"
-              className="rounded-xl bg-emerald-500 px-5 py-2.5 text-sm font-semibold text-slate-950 shadow hover:bg-emerald-400"
-            >
-              Contact
-            </Link>
           </div>
         </div>
       </section>

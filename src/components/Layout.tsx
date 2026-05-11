@@ -32,17 +32,38 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
             >
               Services
             </NavLink>
-            <NavLink
-              to="/contact"
-              className="rounded-lg bg-emerald-500 px-3 py-1.5 text-xs font-semibold text-slate-950 shadow hover:bg-emerald-400"
-            >
-              Contact
-            </NavLink>
           </nav>
         </div>
       </header>
 
       <main>{children}</main>
+
+      <footer className="border-t border-slate-800 bg-slate-950 py-8">
+        <div className="mx-auto max-w-6xl px-4">
+          <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
+            <div className="flex items-center gap-4 text-xs text-slate-400">
+              <Link to="/terms" className="hover:text-emerald-400">
+                Terms of Service
+              </Link>
+              <span className="text-slate-700">|</span>
+              <Link to="/privacy" className="hover:text-emerald-400">
+                Privacy Policy
+              </Link>
+            </div>
+            <div className="text-xs text-slate-400">
+              <a
+                href="mailto:admin@jordanhayes.dev"
+                className="hover:text-emerald-400"
+              >
+                admin@jordanhayes.dev
+              </a>
+            </div>
+          </div>
+          <p className="mt-4 text-center text-xs text-slate-600">
+            &copy; {new Date().getFullYear()} Jordan Hayes. All rights reserved.
+          </p>
+        </div>
+      </footer>
     </div>
   );
 };
