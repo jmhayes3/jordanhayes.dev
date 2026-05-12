@@ -32,6 +32,14 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
             >
               Services
             </NavLink>
+            <NavLink
+              to="/contact"
+              className={({ isActive }) =>
+                [navLinkBase, isActive ? navLinkActive : navLinkInactive].join(" ")
+              }
+            >
+              Contact
+            </NavLink>
           </nav>
         </div>
       </header>

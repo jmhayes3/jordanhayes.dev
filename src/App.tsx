@@ -6,6 +6,7 @@ import { ServicesPage } from "./pages/Services";
 import { TermsPage } from "./pages/Terms";
 import { PrivacyPage } from "./pages/Privacy";
 import { AdminPage } from "./pages/Admin";
+import { ContactPage } from "./pages/Contact";
 import { NotFound } from "./pages/NotFound";
 
 const App: React.FC = () => {
@@ -17,6 +18,7 @@ const App: React.FC = () => {
         <Route path="/terms" element={<TermsPage />} />
         <Route path="/privacy" element={<PrivacyPage />} />
         <Route path="/admin" element={<AdminPage />} />
+        <Route path="/contact" element={<ContactPage />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Layout>
